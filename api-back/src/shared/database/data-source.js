@@ -9,7 +9,7 @@ import Atividades from "../../modules/atividade/typeorm/entities/Atividades";
 export const AppDataSource = new DataSource({
   type: "postgres",
   host: "localhost",
-  port: Number(process.env.TYPEORM_PORT) || 1234,
+  port: Number(process.env.TYPEORM_PORT),
   username: process.env.TYPEORM_USERNAME,
   database: process.env.TYPEORM_DATABASE,
   password: process.env.TYPEORM_PASSWORD,
