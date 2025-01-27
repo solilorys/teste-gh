@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node --watch src/shared/server.js",
-    "typeorm": "typeorm-ts-node-commonjs",
-    "typeormRun": "typeorm -- -d ./src/shared/database/data-source.js migration:run"
+    "migration:run": "typeorm migration:run -d ./src/shared/database/data-source.js"
   },
   "keywords": [],
   "author": "",

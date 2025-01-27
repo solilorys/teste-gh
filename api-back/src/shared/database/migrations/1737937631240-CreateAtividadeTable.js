@@ -1,6 +1,6 @@
-import { Table } from "typeorm";
+import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
-module.exports = class CreateAtividadeTable1737936075550 {
+module.exports = class CreateAtividadeTable1737937631240 {
   async up(queryRunner) {
     await queryRunner.createTable(
       new Table({
@@ -14,17 +14,17 @@ module.exports = class CreateAtividadeTable1737936075550 {
             generationStrategy: "increment",
           },
           {
-            name: "nome",
+            name: "name",
             type: "varchar",
             isNullable: false,
           },
           {
-            name: "inicio_tempo",
+            name: "start_time",
             type: "timestamp",
             isNullable: false,
           },
           {
-            name: "fim_tempo",
+            name: "end_time",
             type: "timestamp",
             isNullable: false,
           },
