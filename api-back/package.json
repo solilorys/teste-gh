@@ -1,24 +1,21 @@
 {
-  "name": "teste-gh",
+  "name": "api-back",
   "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch src/shared/server.js",
-    "migration:run": "typeorm migration:run -d ./src/shared/database/data-source.js"
+    "dev": "node --watch src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "pg": "^8.13.1",
-    "reflect-metadata": "^0.2.2",
-    "typeorm": "^0.3.20"
-  },
-  "devDependencies": {
-    "@types/node": "^22.10.10",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "@prisma/client": "^6.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "prisma": "^6.2.1"
   }
 }

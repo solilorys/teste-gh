@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  teste-gh-db:
+    image: postgres:latest
+    container_name: teste-gh-db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: teste-gh
+    ports:
+      - "5432:5432"
