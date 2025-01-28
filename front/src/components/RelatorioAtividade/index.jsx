@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { CircleChevronLeft } from "lucide-react";
+import { CircleChevronLeft, Trash2 } from "lucide-react";
 import api from "../../services/api";
 import toast from "react-hot-toast";
 
 const Relatorio = () => {
   const [relatorio, setRelatorio] = useState([]);
-  const { nome } = useParams(); // Obtém o nome da URL
+  const { nome } = useParams();
 
   // Busca o relatório da API e agrupa por nome
   const fetchRelatorio = async () => {
@@ -14,7 +14,6 @@ const Relatorio = () => {
       const response = await api.get("/relatorio");
       console.log("Dados recebidos:", response.data);
 
-      // Agrupa as atividades pelo campo "nome"
       const agrupado = response.data.reduce((acc, atividade) => {
         const { nome } = atividade;
         if (!acc[nome]) {
@@ -24,7 +23,6 @@ const Relatorio = () => {
         return acc;
       }, {});
 
-      // Converte o objeto agrupado em um array
       setRelatorio(Object.entries(agrupado));
     } catch (err) {
       console.error("Erro ao buscar o relatório:", err);
@@ -37,13 +35,14 @@ const Relatorio = () => {
     try {
       await api.delete(`/atividades/${id}`);
       toast.success("Atividade excluída com sucesso!");
-      fetchRelatorio(); // Atualiza o relatório após excluir
+      fetchRelatorio();
     } catch (err) {
       console.error("Erro ao excluir atividade:", err);
       toast.error("Erro ao excluir a atividade.");
     }
   };
 
+  // Função para formatar a data
   function formatarData(data) {
     if (!data) {
       return "Data inválida";
@@ -58,11 +57,11 @@ const Relatorio = () => {
       (total, atividade) => total + parseFloat(atividade.tempo || 0),
       0
     );
-    return total.toFixed(2); // Retorna o total formatado com 2 casas decimais
+    return total.toFixed(2);
   };
 
   useEffect(() => {
-    fetchRelatorio(); // Carrega o relatório
+    fetchRelatorio();
   }, []);
 
   // Filtra apenas as atividades com o nome igual ao parâmetro
@@ -111,7 +110,7 @@ const Relatorio = () => {
                               onClick={() => excluirAtividade(atividade.id)}
                               className="text-red-500 hover:text-red-700"
                             >
-                              Excluir
+                              <Trash2 />
                             </button>
                           </td>
                         </tr>
