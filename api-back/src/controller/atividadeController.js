@@ -8,7 +8,6 @@ import {
 // Função para registrar uma nova atividade
 export async function criarAtividadeController(req, res) {
   try {
-    console.log(req.body);
     const atividade = await criarAtividade(req.body);
     res.status(201).json(atividade);
   } catch (err) {
