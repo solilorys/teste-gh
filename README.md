@@ -1,6 +1,6 @@
-# **Projeto de Gerenciamento de Atividades e Tempo Despendido**
+# **Teste GH**
 
-Este projeto tem como objetivo gerenciar atividades e o tempo despendido, permitindo o cadastro de atividades com seus respectivos períodos e gerando relatórios de tempo gasto por dia.
+Este projeto tem como objetivo realização de um teste para GH.
 
 ## **Índice**
 
