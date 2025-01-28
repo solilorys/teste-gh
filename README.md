@@ -1,10 +1,25 @@
-Claro! Aqui está o seu **README** atualizado com as informações adicionais sobre as tecnologias utilizadas no projeto:
-
----
-
 # **Projeto de Gerenciamento de Atividades e Tempo Despendido**
 
 Este projeto tem como objetivo gerenciar atividades e o tempo despendido, permitindo o cadastro de atividades com seus respectivos períodos e gerando relatórios de tempo gasto por dia.
+
+## **Índice**
+
+1. [Objetivo do Projeto](#objetivo-do-projeto)
+2. [Tecnologias Utilizadas](#tecnologias-utilizadas)
+   - [Back-End](#back-end)
+   - [Front-End](#front-end)
+   - [Integração](#integração)
+3. [Passos para Executar o Projeto](#passos-para-executar-o-projeto)
+   - [1. Garanta que o Docker esteja instalado](#1-garante-que-o-docker-está-instalado)
+   - [2. Instale as dependências do projeto](#2-instale-as-dependências-do-projeto)
+   - [3. Suba o container do banco de dados](#3-suba-o-container-do-banco-de-dados)
+   - [4. Realize as migrações do banco de dados](#4-realize-as-migrações-do-banco-de-dados)
+   - [5. Rodando o Back-End](#5-rodando-o-back-end)
+   - [6. Rodando o Front-End](#6-rodando-o-front-end)
+   - [7. Pronto! Tudo funcionando](#7-pronto-tudo-funcionando)
+4. [Links e Referências](#links-e-referências)
+
+---
 
 ### **Tecnologias Utilizadas**
 
@@ -51,14 +66,14 @@ Com o repositório do projeto já clonado em seu computador, entre nas pastas do
 **No Front-End:**
 
 ```bash
-cd frontend
+cd front
 npm install
 ```
 
 **No Back-End:**
 
 ```bash
-cd backend
+cd api-back
 npm install
 ```
 
@@ -110,7 +125,7 @@ Agora, o sistema de gerenciamento de atividades e tempo está rodando! Você pod
 
 ## **Links e Referências**
 
-- **Repositório GitHub**: [Seu link para o GitHub]
+- **Repositório GitHub**: [\[(https://github.com/solilorys/teste-gh)\]](https://github.com/solilorys/teste-gh)
 - **Docker Desktop**: [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
 
 ---
@@ -118,5 +133,3 @@ Agora, o sistema de gerenciamento de atividades e tempo está rodando! Você pod
 Com esses passos, seu ambiente de desenvolvimento estará pronto para usar o projeto localmente. Se tiver alguma dúvida ou encontrar problemas durante a execução, não hesite em me chamar!
 
 ---
-
-Agora o README inclui detalhes sobre as tecnologias utilizadas, além de instruções claras de como rodar o projeto!
